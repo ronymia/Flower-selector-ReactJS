@@ -35,7 +35,7 @@ export default function Cart({ cart, setCart }) {
             </div>
             <div>
                 <button type="button" className="cart--btn-offer">Choose 1 for me</button>
-                <button type="button">Choose again</button>
+                <button type="button" onClick={() => setCart([])}>Choose again</button>
             </div>
         </div>
     )
