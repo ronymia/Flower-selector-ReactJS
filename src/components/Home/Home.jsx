@@ -55,7 +55,7 @@ export default function Home() {
                 }
             </section>
             <aside className="cart-container">
-                <Cart cart={cart} />
+                <Cart cart={cart} setCart={setCart} />
             </aside>
         </section>
     )

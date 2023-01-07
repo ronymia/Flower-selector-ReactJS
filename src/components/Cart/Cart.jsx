@@ -2,7 +2,15 @@ import React from 'react';
 import { BsTrash } from 'react-icons/bs';
 import './Cart.css';
 
-export default function Cart({ cart }) {
+export default function Cart({ cart, setCart }) {
+    const removeItem = (selectedProduct) => {
+        let restItems = [];
+        const rest = cart.filter(product => product.id !== selectedProduct.id);
+        restItems = [...rest];
+        // set cart items
+        setCart(restItems)
+    }
+
     return (
         <div className="cart">
             <h1>Order Summary</h1>
@@ -19,7 +27,7 @@ export default function Cart({ cart }) {
                                 <p className="cart-product__price">price : ${product.price}</p>
                             </div>
                             <div className="icons">
-                                <BsTrash className='' />
+                                <BsTrash onClick={() => removeItem(product)} />
                             </div>
                         </div>
                     )
