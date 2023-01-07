@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsTrash } from 'react-icons/bs';
 import './Cart.css';
 
 export default function Cart({ cart, setCart }) {
+    const [offer, setOffer] = useState(false);
+
+    useEffect(() => {
+        if (cart.length > 1) {
+            setOffer(true);
+        } else {
+            setOffer(false);
+        }
+    }, [cart]);
 
     const removeItem = (selectedProduct) => {
         let restItems = [];
@@ -45,7 +54,7 @@ export default function Cart({ cart, setCart }) {
                 <button type="button"
                     className="cart--btn-offer"
                     onClick={randomSelectItem}
-                    disabled={false}
+                    disabled={!offer}
                 >Choose 1 for me</button>
                 <button type="button" onClick={() => setCart([])}>Choose again</button>
             </div>

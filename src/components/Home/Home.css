@@ -1,6 +1,8 @@
 .container {
     display: flex;
-    /* width: 100%; */
+    width: 100%;
+    padding: 1rem 2rem;
+    gap: 2rem;
 }
 
 /*-----------------------------------*\
@@ -21,7 +23,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 1rem 2rem;
 }
 
 
