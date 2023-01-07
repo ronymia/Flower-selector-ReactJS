@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { MdAddShoppingCart } from 'react-icons/md';
+import Cart from '../Cart/Cart';
 import './Home.css';
 
 export default function Home() {
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('/data.json')
@@ -10,12 +13,17 @@ export default function Home() {
             .then(data => setProducts(data))
     }, [])
 
+    const addToCart = (selectedProduct) => {
+        let newCart = [...cart, selectedProduct]
+        setCart(newCart)
+    }
+
     return (
         <section className="container">
             <section className="shop-container">
                 {
                     products.map(product =>
-                        <article className="product">
+                        <article key={product.id} className="product">
                             <figure>
                                 <img src={product.img} alt="" />
                             </figure>
@@ -25,12 +33,13 @@ export default function Home() {
                             </div>
                             <button type="button"
                                 className="product__btn"
-                            >Add To Cart</button>
+                                onClick={() => addToCart(product)}
+                            >Add To Cart <MdAddShoppingCart className="btn__icon" /> </button>
                         </article>)
                 }
             </section>
             <aside className="cart-container">
-                <h1>cart</h1>
+                <Cart cart={cart} />
             </aside>
         </section>
     )
