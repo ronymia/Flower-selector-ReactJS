@@ -3,12 +3,20 @@ import { BsTrash } from 'react-icons/bs';
 import './Cart.css';
 
 export default function Cart({ cart, setCart }) {
+
     const removeItem = (selectedProduct) => {
         let restItems = [];
         const rest = cart.filter(product => product.id !== selectedProduct.id);
         restItems = [...rest];
         // set cart items
         setCart(restItems)
+    }
+
+    const randomSelectItem = () => {
+        const random = Math.floor(Math.random() * cart.length);
+        const items = [(cart[random])];
+        //set cart items
+        setCart(items);
     }
 
     return (
@@ -34,7 +42,7 @@ export default function Cart({ cart, setCart }) {
                 }
             </div>
             <div>
-                <button type="button" className="cart--btn-offer">Choose 1 for me</button>
+                <button type="button" className="cart--btn-offer" onClick={randomSelectItem}>Choose 1 for me</button>
                 <button type="button" onClick={() => setCart([])}>Choose again</button>
             </div>
         </div>
