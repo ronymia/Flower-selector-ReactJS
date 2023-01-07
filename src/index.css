@@ -17,14 +17,11 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
+    overflow: hidden;
 }
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
-}
-
-body {
-    background-color: rgba(253, 245, 245, 0.774);
 }

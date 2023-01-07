@@ -3,37 +3,37 @@
         "id":"01",
         "name":"Flower Pot 1",
         "img":"https://i.ibb.co/Gdtx5w4/img-1.jpg",
-        "price":"8"
+        "price":"11.65"
     },
     {
         "id":"02",
         "name":"Flower Pot 2",
         "img":"https://i.ibb.co/tKgg9Qz/img-2.jpg",
-        "price":"9"
+        "price":"9.99"
     },
     {
         "id":"03",
         "name":"Flower Pot 3",
         "img":"https://i.ibb.co/D7YqyJJ/img-3.jpg",
-        "price":"11"
+        "price":"11.5"
     },
     {
         "id":"04",
         "name":"Flower Pot 4",
         "img":"https://i.ibb.co/Mn9rfjG/img-4.jpg",
-        "price":"13"
+        "price":"13.99"
     },
     {
         "id":"05",
         "name":"Flower Pot 5",       
         "img":"https://i.ibb.co/bF1rpG4/img-5.jpg",
-        "price":"15"
+        "price":"15.99"
     },
     {
         "id":"06",
         "name":"Flower Pot 6",
         "img":"https://i.ibb.co/hBMkbDR/img-6.jpg",
-        "price":"20"
+        "price":"20.99"
     },
     {
         "id":"07",
@@ -45,12 +45,12 @@
         "id":"08",
         "name":"Flower Pot 8",
         "img":"https://i.ibb.co/ySYzvkY/img-8.jpg",
-        "price":"10"
+        "price":"10.99"
     },
     {
         "id":"09",
         "name": "Flower Pot 9",
         "img":"https://i.ibb.co/d7tGsPk/img-9.jpg",
-        "price":"09"
+        "price":"09.99"
     }
 ]
