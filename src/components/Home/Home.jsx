@@ -14,8 +14,24 @@ export default function Home() {
     }, [])
 
     const addToCart = (selectedProduct) => {
-        let newCart = [...cart, selectedProduct]
-        setCart(newCart)
+        let newCart = [];
+        const exist = cart.find(product => product.id === selectedProduct.id);
+
+        if (cart.length >= 4) {
+            alert("only 4 product select");
+            return;
+        } else if (exist) {
+            alert("already exist");
+            return;
+        } else if (!exist) {
+            newCart = [...cart, selectedProduct];
+        } else {
+            const rest = cart.filter(product => product.id !== selectedProduct.id);
+            newCart = [...rest, exist];
+        }
+
+        // set to cart
+        setCart(newCart);
     }
 
     return (
