@@ -42,7 +42,11 @@ export default function Cart({ cart, setCart }) {
                 }
             </div>
             <div>
-                <button type="button" className="cart--btn-offer" onClick={randomSelectItem}>Choose 1 for me</button>
+                <button type="button"
+                    className="cart--btn-offer"
+                    onClick={randomSelectItem}
+                    disabled={false}
+                >Choose 1 for me</button>
                 <button type="button" onClick={() => setCart([])}>Choose again</button>
             </div>
         </div>

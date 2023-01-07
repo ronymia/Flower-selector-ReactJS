@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
 }
 
 /*-----------------------------------*\
@@ -29,6 +29,7 @@
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     border-radius: .5rem;
     border: 0.1rem solid rgba(232, 67, 147, 0.1);
+    overflow: hidden;
 }
 
 /*-----------------------------------*\
@@ -101,7 +102,7 @@
 }
 
 /*-----------------------------------*\
-             btn icos  
+             btn icpns  
 /*-------------------------------------*/
 
 .container .shop-container .product .product__btn .btn__icon {
